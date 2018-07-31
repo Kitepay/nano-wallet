@@ -19,8 +19,8 @@ module Nano
       Ed25519Blake2b.public_key(private_key)
     end
 
-    def address
-
+    def address(prefix = "xrb")
+      Util.public_key_to_address(prefix, public_key)
     end
     alias_method :to_s, :address
   end
