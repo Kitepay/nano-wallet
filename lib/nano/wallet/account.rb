@@ -12,7 +12,7 @@ module Nano
     end
 
     def private_key
-      Util.hex_to_bin(Blake2b.hex(@seed_bin + [@index].pack('L'), Blake2b::Key.none, 32))
+      Util.hex_to_bin(Blake2b.hex(@seed_bin + [@index].pack('L>'), Blake2b::Key.none, 32))
     end
 
     def public_key

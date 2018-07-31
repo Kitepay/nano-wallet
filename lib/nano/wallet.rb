@@ -19,7 +19,7 @@ module Nano
     end
 
     def add_accounts!(count)
-      count.times { generate_account! }
+      count.times { add_account! }
     end
 
     def add_account!
