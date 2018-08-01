@@ -1,3 +1,4 @@
+require "securerandom"
 require_relative "wallet/version"
 require_relative "wallet/account"
 
@@ -7,7 +8,7 @@ module Nano
       self.new(SecureRandom.hex(32))
     end
 
-    attr_reader :accounts
+    attr_reader :seed, :accounts
 
     def initialize(seed)
       @seed = seed
